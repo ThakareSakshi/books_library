@@ -240,6 +240,7 @@ main{
     transform: translate(100%,50%);
    width: 500px;
    padding:20px;
+   border-radius: 20px;
   }
 
   .info_container{
@@ -295,6 +296,25 @@ main{
     position: absolute;
     top:20px ;
     right: 20px;
+}
+.all-categories{
+    font-size: 20px;
+    font-weight: bold;
+    color:rgb(66, 36, 214);
+    text-transform: uppercase;
+}
+.shopping-sites a img:hover{
+    transform: scale(1.1);
+    
+
+}
+.shopping-sites a{
+    margin:20px
+
+}
+.des{
+    text-transform: capitalize;
+    font-weight: 400;
 }
 
 ::-webkit-scrollbar {
