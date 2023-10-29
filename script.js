@@ -4,6 +4,12 @@ let main_content_container=document.querySelector(".main_content_container");
 let All_categories=document.querySelector(".all-categories");
 let dialog=document.querySelector("dialog")
 let dialog_box_container=document.querySelector(".dialog_box_container");
+let mode=document.querySelector(".mode");
+let navbar=document.querySelector("nav");
+let button=document.querySelector(".show_All_btn");
+
+
+
 
 DisplayMainpage();
 showAllCategories();
@@ -16,6 +22,16 @@ All_categories.addEventListener("click",()=>{
     heading.innerText="Best Sellers Books"
     main_content_container.appendChild(heading)
     DisplayMainpage();
+})
+
+mode.addEventListener("click",()=>{
+    if(mode.innerHTML=='<i class="fas fa-sun"></i>'){
+        document.body.style.backgroundColor="hsl(0, 0%, 16%)";
+       main_content_container.style.color="white"
+       categories_container.style.color="rgb(142, 141, 141)";
+       navbar.style.backgroundColor="rgb(142, 141, 141)";
+       button.style.color="white";
+    }
 })
 //------------fetching Api---------------------->
 async function fetchApi(){
@@ -99,10 +115,16 @@ category.forEach(element=>{
        
     </div>
   </div>
+  <div class="close">X</div>
   <button class="add-to-cart">Add to shopping list</button>`
   dialog.show();
    dialog_box_container.style.display="block";
+   let closeBtn=dialog_box_container.querySelector(".close");
+   closeBtn.addEventListener("click",()=>{
+    dialog_box_container.style.display="none";
    })
+   })
+  
    
 
 })
