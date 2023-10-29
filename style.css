@@ -182,6 +182,7 @@ main{
     height:0px;
     bottom: 0%;
     transition:All .4s linear;
+    color:black;
     /* display: none; */
    }
    .book_info:hover{
@@ -337,6 +338,13 @@ main{
   ::-webkit-scrollbar-thumb:hover {
     background: #8c8a8a; 
   }
+  footer{
+    padding:20px;
+    text-align: center;
+    background-color: grey;
+    color:black;
+
+  }
 
 
   @media screen  and (max-width:1100px){
@@ -369,5 +377,30 @@ main{
     }
     header{
         padding: 0%;
+    }
+    #dialog_box{
+        transform: translate(0,0);
+        width: 90%;
+        height: auto;
+        margin:10px;
+        height: 500px;
+        overflow-y: scroll;
+    }
+    .info_container{
+        flex-direction: column;
+        padding: 5px;
+    }
+    .book_image{
+        width: 80%;
+    }
+    .book-title{
+        width: 100%;
+        padding: 5px;
+    }
+    .add-to-cart{
+        position: relative;
+        bottom: unset;
+        right: unset;
+
     }
  }
