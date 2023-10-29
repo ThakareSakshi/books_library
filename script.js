@@ -7,7 +7,10 @@ let dialog_box_container=document.querySelector(".dialog_box_container");
 let mode=document.querySelector(".mode");
 let navbar=document.querySelector("nav");
 let addToCart=document.querySelector(".add-to-cart");
-// let button=document.querySelector(".show_All_btn");
+let Signupbutton=document.querySelector("#signup");
+let backBtn=document.querySelector("#backTomain");
+let signupSection=document.querySelector(".signup-section")
+let main =document.querySelector("main");
 
 
 
@@ -15,7 +18,18 @@ let addToCart=document.querySelector(".add-to-cart");
 DisplayMainpage();
 showAllCategories();
 
+Signupbutton.addEventListener("click",()=>{
+    main.style.display="none";
+    signupSection.style.display="flex";
 
+})
+
+backBtn.addEventListener("click",()=>{
+    main.style.display="flex";
+    signupSection.style.display="none";
+})
+
+// --------------------All categories-------------------->
 All_categories.addEventListener("click",()=>{
     main_content_container.innerHTML=""
     let heading=document.createElement("h1");
@@ -25,6 +39,8 @@ All_categories.addEventListener("click",()=>{
     DisplayMainpage();
 })
 
+
+// ---------------change mode------------->
 mode.addEventListener("click",()=>{
     if(mode.innerHTML=='<i class="fas fa-sun"></i>'){
         document.body.style.backgroundColor="hsl(0, 0%, 16%)";
