@@ -6,7 +6,8 @@ let dialog=document.querySelector("dialog")
 let dialog_box_container=document.querySelector(".dialog_box_container");
 let mode=document.querySelector(".mode");
 let navbar=document.querySelector("nav");
-let button=document.querySelector(".show_All_btn");
+let addToCart=document.querySelector(".add-to-cart");
+// let button=document.querySelector(".show_All_btn");
 
 
 
@@ -29,8 +30,22 @@ mode.addEventListener("click",()=>{
         document.body.style.backgroundColor="hsl(0, 0%, 16%)";
        main_content_container.style.color="white"
        categories_container.style.color="rgb(142, 141, 141)";
-       navbar.style.backgroundColor="rgb(142, 141, 141)";
-       button.style.color="white";
+       navbar.style.backgroundColor="rgb(192, 191, 191)";
+       mode.innerHTML=`<i class="fas fa-moon"></i>`;
+       dialog.style.backgroundColor="black";
+       dialog.style.color="white";
+      
+    }
+    else{
+        document.body.style.backgroundColor="#F6F6F6";
+        main_content_container.style.color="black"
+        categories_container.style.color="#11111159";
+        navbar.style.backgroundColor="white";
+        dialog.style.backgroundColor="white";
+        dialog.style.backgroundColor="rgb(142, 141, 141)";
+        dialog.style.color="black";
+        mode.innerHTML=`<i class="fas fa-sun"></i>`;
+
     }
 })
 //------------fetching Api---------------------->
@@ -117,12 +132,26 @@ category.forEach(element=>{
   </div>
   <div class="close">X</div>
   <button class="add-to-cart">Add to shopping list</button>`
-  dialog.show();
+   dialog.show();
    dialog_box_container.style.display="block";
+
    let closeBtn=dialog_box_container.querySelector(".close");
+   let addToCart=dialog_box_container.querySelector(".add-to-cart");
+
    closeBtn.addEventListener("click",()=>{
-    dialog_box_container.style.display="none";
+        dialog_box_container.style.display="none"; 
    })
+
+   addToCart.addEventListener("click",()=>{
+    if(localStorage.name==null){
+        alert("login to add to shopping list");
+    }else{
+        console.log("added tp cart");
+    }
+   })
+
+
+
    })
   
    

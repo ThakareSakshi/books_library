@@ -123,6 +123,14 @@ main{
     border: none;
 
 }
+#signup:hover{
+    padding:15px 20px;
+    background-color: rgb(242, 193, 31);
+    color:white;
+    border-radius: 14px;
+    border: none;
+
+}
 .category_name{
     color:grey;
     margin:20px;
@@ -217,7 +225,7 @@ main{
    
     height:100vh;
     width: 100vw;
-    background-color: rgba(0, 0, 0, 0.501);
+    background-color: rgba(40, 40, 40, 0.44);
     display: none;
 
   }
@@ -229,6 +237,7 @@ main{
     z-index: 45;
     transform: translate(100%,50%);
    width: 500px;
+   padding:20px;
   }
 
   .info_container{
@@ -267,6 +276,10 @@ main{
     bottom: 20px;
     right:30%;
 }
+.add-to-cart:hover{
+   background-color: blue;
+   color:white;
+}
 .dialog_box_container{
     position:fixed;
     top:0px;
@@ -281,3 +294,24 @@ main{
     top:20px ;
     right: 20px;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+
+  ::-webkit-scrollbar-track {
+   /* box-shadow: inset 0 0 5px grey; */
+    border-radius: 10px;
+  }
+   
+
+  ::-webkit-scrollbar-thumb {
+    background: grey; 
+    border-radius: 10px;
+  }
+  
+ 
+  ::-webkit-scrollbar-thumb:hover {
+    background: #8c8a8a; 
+  }
