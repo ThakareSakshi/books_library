@@ -30,7 +30,7 @@ mode.addEventListener("click",()=>{
         document.body.style.backgroundColor="hsl(0, 0%, 16%)";
        main_content_container.style.color="white"
        categories_container.style.color="rgb(142, 141, 141)";
-       navbar.style.backgroundColor="rgb(192, 191, 191)";
+       navbar.style.backgroundColor="rgb(55,55, 55)";
        mode.innerHTML=`<i class="fas fa-moon"></i>`;
        dialog.style.backgroundColor="black";
        dialog.style.color="white";
